@@ -1,0 +1,14 @@
+﻿@model web2.Models.User
+@{
+	ViewBag.Title = "More About Us";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("More", "AboutUs", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+
+	<p>Although @Model.FirstName @Model.LastName is generally a nice person, without coffee, he's a little cranky in the morning.</p>
+
+	<div class="section">
+		<button class="button-action" id="btnClose" name="btnSubmit" value="close"><i class='fa fa-times'></i> Close</button>
+	</div>}
